@@ -2,13 +2,24 @@
 
 void Main()
 {
-	//I think what happens is:
-	// zval = "8*","7*","6*","
+	// Pluralsight Prac
+	//I think what happens is: zval = "8*","7*","6*","
 	int zval = Fibonacci(5);
 	int zRecursiveVal = FibonacciRecursion(5); 
 	
 	Console.Write("\n\nIterative Result = "+zval); 
-	Console.Write("\n\nRecusive Result = "+zRecursiveVal); 
+	Console.Write("\n\nRecusive Result = "+zRecursiveVal);
+
+	int x = 0;
+	StringBuilder sb = new StringBuilder("hi");
+
+	while (true)
+	{
+		x++;
+		if (x == 12) break;
+		sb.Append(" " + x.ToString());
+	}
+	Console.Write(sb.ToString());
 }
 
 // Define other methods and classes here

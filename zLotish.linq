@@ -15,7 +15,7 @@ void Main()
 	
 	float[] hourFloatArray = {};
 	
-	string timeDifference = Lotish.TimeAdd(11, 43, "am", 1, 55, "pm" ); // Enter data here <<<<<<<<<<<<<<<<<<<
+	string timeDifference = Lotish.TimeAdd(9, 50, "am", 8, 02, "pm" ); // Enter data here <<<<<<<<<<<<<<<<<<<
 	string studyTime = Lotish.StudyAdd(hourArray, minArray, "+");  // and here <<<<<<<<<<<<<<<<<<
 	float studyTimeFloat = Lotish.StudyAdd(hourFloatArray); 
 	
