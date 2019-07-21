@@ -15,14 +15,15 @@ void Main()
 	
 	float[] hourFloatArray = {};
 	
-	string timeDifference = Lotish.TimeAdd(9, 50, "am", 8, 02, "pm" ); // Enter data here <<<<<<<<<<<<<<<<<<<
+	string timeDifference = Lotish.TimeAdd(9, 50, "am", 3, 58, "pm" ); // Enter data here <<<<<<<<<<<<<<<<<<<
 	string studyTime = Lotish.StudyAdd(hourArray, minArray, "+");  // and here <<<<<<<<<<<<<<<<<<
 	float studyTimeFloat = Lotish.StudyAdd(hourFloatArray); 
 	
 	#region ... display the data ...
 	
 	float totalCalc = (Lotish.StudyAdd(hourArray2, minArray2) - Lotish.StudyAdd(hourArray, minArray));
-	Console.WriteLine ("h2m2 - h1m1... \n"+ Lotish.StudyAdd(hourArray2, minArray2)+"mins -"+ 
+	
+	Console.WriteLine ("\n h2m2 - h1m1... \n"+ Lotish.StudyAdd(hourArray2, minArray2)+"mins - "+ 
 		Lotish.StudyAdd(hourArray, minArray)+"mins = " + 
 		totalCalc + "mins or "+ Math.Round((totalCalc/60.0f),2) +"hours\n\n"
 	); 
@@ -245,5 +246,7 @@ public class Lotish
 		}
 		return totalFloat; 
 	}
+	
 }//	 END OF "public protected class Lotish{}" class
+
 #endregion
