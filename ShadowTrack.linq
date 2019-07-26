@@ -2,20 +2,26 @@
 
 void Main()
 {
+	
+	
+	/* The Primary Function */
+	string timeDifference = ShadowTrack.TimeAdd(1, 50, "pm", 5, 58, "pm"); 
+	/* Output The Results */
+	Console.WriteLine("\n\n" + timeDifference + "\n");
+	
 
-	// put in all the mins from the inbetween quickly noted lost time from the ShadowTrack
+	
+	
+	// put in all the mins from the inbetween quickly noted lost time from ShadowTrack
 	// into this array ......Right Below Here.......
-	int[] minArray = { 0 };
-	//if there happens to be spans of an hour or more plug into this array
-	int[] hourArray = { 0 };
+	// if there happens to be spans of an hour or more plug into this array
+	int[] hourArray = { 0 }, minArray = { 0 };
 
-	//this will be used like "hourArray2 minArray2 - hourArray minArray", typical use case would be when I have an 
-	//amount of time being subtracted by another amount of time e.g. 4h28m - 2h37m...
+	// amount of time subtracted by another amount of time e.g. 4h28m - 2h37m...
 	int[] hourArray2 = { 0 }, minArray2 = { 0 };
 
 	float[] hourFloatArray = { };
-
-	string timeDifference = ShadowTrack.TimeAdd(9, 50, "am", 3, 58, "pm"); // Enter data here <<<<<<<<<<<<<<<<<<<
+	
 	string studyTime = ShadowTrack.StudyAdd(hourArray, minArray, "+");  // and here <<<<<<<<<<<<<<<<<<
 	float studyTimeFloat = ShadowTrack.StudyAdd(hourFloatArray);
 
@@ -23,14 +29,15 @@ void Main()
 
 	float totalCalc = (ShadowTrack.StudyAdd(hourArray2, minArray2) - ShadowTrack.StudyAdd(hourArray, minArray));
 
-	Console.WriteLine("\n h2m2 - h1m1... \n" + ShadowTrack.StudyAdd(hourArray2, minArray2) + "mins - " +
+
+	/* addtional output */
+	Console.WriteLine("\n\n h2m2 - h1m1... \n" + ShadowTrack.StudyAdd(hourArray2, minArray2) + "mins - " +
 		ShadowTrack.StudyAdd(hourArray, minArray) + "mins = " +
 		totalCalc + "mins or " + Math.Round((totalCalc / 60.0f), 2) + "hours\n\n"
 	);
 
 	Console.WriteLine("Added float +time = " + studyTimeFloat.ToString() + "hours\n\n");
-
-	Console.WriteLine(timeDifference + "\n");//the par contains info and display message about times  
+	
 
 	#endregion
 	//_____________________________________END____________________________________________
