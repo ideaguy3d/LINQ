@@ -3,14 +3,10 @@
 void Main()
 {
 	
-	
 	/* The Primary Function */
-	string timeDifference = ShadowTrack.TimeAdd(1, 50, "pm", 5, 58, "pm"); 
+	string timeDifference = ShadowTrack.TimeAdd(9, 57, "am", 12, 46, "pm"); 
 	/* Output The Results */
 	Console.WriteLine("\n\n" + timeDifference + "\n");
-	
-
-	
 	
 	// put in all the mins from the inbetween quickly noted lost time from ShadowTrack
 	// into this array ......Right Below Here.......
