@@ -4,7 +4,7 @@ void Main()
 {
 	
 	/* The Primary Function */
-	string timeDifference = ShadowTrack.TimeAdd(9, 57, "am", 12, 46, "pm"); 
+	string timeDifference = ShadowTrack.TimeAdd(10, 16, "am", 1, 15, "pm"); 
 	/* Output The Results */
 	Console.WriteLine("\n\n" + timeDifference + "\n");
 	
