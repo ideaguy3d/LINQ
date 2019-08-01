@@ -17,16 +17,39 @@
 void Main()
 {
 
-	RemovedEncodes.Take(100).Dump(); 
+	encodeRemoveTransform(); 
 	
 }
+
+public void encodeRemoveTransform() 
+{
+	bool output2console = false; 
+
+	DataTable encodesResultSet1 = RemovedEncodes.Take(100) as DataTable;
+	string pathToServer = @"C:\xampp\htdocs\linq";
+
+	//-- write the data to HTML then save to disk and iframe it
+	Util.ToCsvString(pathToServer, Util.ToHtmlString(encodesResultSet1));
+
+	//-- write the data to a CSV file
+	File.WriteAllText(pathToServer, Util.ToCsvString(encodesResultSet1));
+
+	if(output2console) {
+		RemovedEncodes.Take(10).Dump();
+	}
+	
+	//-- can be used to transform large / blobs of data to CSV format then write to disk 
+	//Util.WriteCsv(
+}
+
 
 // Define other methods and classes here
 public void oneBasic()
 {
 	123.Dump();
 
-	Regex.Match("paper and envelope color is...", "colou?r").Dump();   // LINQPad is great for Regex testing!
+	// LINQPad can be used for Regex testing as well. 
+	Regex.Match("paper and envelope color is...", "colou?r").Dump();   
 
 	// Dump accepts an optional title for formatting:
 
